@@ -6,19 +6,18 @@ class AppDelegate
       sections: [{
         title: "Label",
         rows: [{
-          title: "",
+          title: "Yo",
           name: "Textfield",
           type: :text,
-          placeholder: "Textfield",
-          # row_height: 100
+          placeholder: "Textfield"
         }]
       }]
     })
 
     @view_controller = Formotion::FormController.alloc.initWithForm(form)
     @view_controller.form.on_submit do |form|
-        p @view_controller.form.render
-      end
+      p @view_controller.form.render
+    end
 
     @window.rootViewController = @view_controller
     @window.makeKeyAndVisible
